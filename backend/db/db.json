@@ -1,0 +1,36 @@
+{
+  "medicamentos": [
+    {
+      "id": "639",
+      "nome": "Paracetamol w",
+      "descricao": "Medicamento",
+      "lembretes": [],
+      "forma": "",
+      "intervalo": "",
+      "quantidade": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "procedimento": ""
+    },
+    {
+      "id": "639",
+      "nome": "Paracetamol ww",
+      "descricao": "Medicamento",
+      "lembretes": [],
+      "forma": "",
+      "intervalo": "",
+      "quantidade": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "procedimento": ""
+    }
+  ],
+  "lembretes": [
+    {
+      "id": "1",
+      "medicamentoId": 1,
+      "horario": "2024-11-10T08:00:00",
+      "mensagem": "Tomar Paracetamol"
+    }
+  ]
+}
