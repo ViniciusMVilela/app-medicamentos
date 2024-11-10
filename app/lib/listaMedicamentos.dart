@@ -88,8 +88,8 @@ class _ListaMedicamentosPageState extends State<ListaMedicamentosPage> {
                         ),
                         IconButton(
                           icon: const Icon(Icons.delete),
-                          onPressed: () =>
-                              _removerMedicamento(int.parse(medicamento.id)),
+                          onPressed: () => _removerMedicamento(
+                              int.parse(medicamento.id as String)),
                         ),
                       ],
                     ),

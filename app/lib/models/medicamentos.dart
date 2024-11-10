@@ -1,16 +1,17 @@
 import 'package:atividade04/models/lembrete.dart';
 
 class Medicamento {
-  String id;
+  int id;
   String nome;
   String descricao;
   List<Lembrete> lembretes;
   String forma;
-  String intervalo;
-  String quantidade;
+  int intervalo;
+  int quantidade;
   String dataInicio;
   String dataFim;
   String procedimento;
+  int dosagem;
 
   Medicamento({
     required this.id,
@@ -23,7 +24,7 @@ class Medicamento {
     required this.dataInicio,
     required this.dataFim,
     required this.procedimento,
-    required String dosagem,
+    required this.dosagem,
   });
 
   factory Medicamento.fromJson(Map<String, dynamic> json) {

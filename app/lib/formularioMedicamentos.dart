@@ -18,6 +18,13 @@ class _FormularioMedicamentoPageState extends State<FormularioMedicamentoPage> {
   final _formKey = GlobalKey<FormState>();
   final _nomeController = TextEditingController();
   final _descricaoController = TextEditingController();
+  final _procedimentoController = TextEditingController();
+  final _formaController = TextEditingController();
+  final _intervaloController = TextEditingController();
+  final _quantidadeController = TextEditingController();
+  final _dosagemController = TextEditingController();
+  final _dataInicioController = TextEditingController();
+  final _dataFimController = TextEditingController();
 
   @override
   void initState() {
@@ -25,23 +32,30 @@ class _FormularioMedicamentoPageState extends State<FormularioMedicamentoPage> {
     if (widget.medicamento != null) {
       _nomeController.text = widget.medicamento!.nome;
       _descricaoController.text = widget.medicamento!.descricao;
+      _procedimentoController.text = widget.medicamento!.procedimento;
+      _formaController.text = widget.medicamento!.forma;
+      _intervaloController.text = widget.medicamento!.intervalo.toString();
+      _quantidadeController.text = widget.medicamento!.quantidade.toString();
+      _dosagemController.text = widget.medicamento!.dosagem.toString();
+      _dataInicioController.text = widget.medicamento!.dataInicio.toString();
+      _dataFimController.text = widget.medicamento!.dataFim.toString();
     }
   }
 
   void _salvarMedicamento() {
     if (_formKey.currentState!.validate()) {
       final novoMedicamento = Medicamento(
-        id: widget.medicamento?.id ?? Random().nextInt(1000).toString(),
+        id: widget.medicamento?.id ?? Random().nextInt(1000),
         nome: _nomeController.text,
         descricao: _descricaoController.text,
-        procedimento: '',
+        procedimento: _procedimentoController.text,
         lembretes: [],
-        forma: '',
-        intervalo: '',
-        quantidade: '',
-        dosagem: '',
-        dataInicio: '',
-        dataFim: '',
+        forma: _formaController.text,
+        intervalo: int.parse(_intervaloController.text),
+        quantidade: int.parse(_quantidadeController.text),
+        dosagem: int.parse(_dosagemController.text),
+        dataInicio: _dataInicioController.text,
+        dataFim: _dataFimController.text,
       );
       final apiService = ApiService();
       apiService.addMedicamento(novoMedicamento).then((_) {
@@ -83,6 +97,76 @@ class _FormularioMedicamentoPageState extends State<FormularioMedicamentoPage> {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, insira a descrição do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _procedimentoController,
+                decoration: const InputDecoration(labelText: 'Procedimento'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o procedimento do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _formaController,
+                decoration: const InputDecoration(labelText: 'Forma'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira a forma do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _intervaloController,
+                decoration: const InputDecoration(labelText: 'Intervalo'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira o intervalo do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _quantidadeController,
+                decoration: const InputDecoration(labelText: 'Quantidade'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira a quantidade do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _dosagemController,
+                decoration: const InputDecoration(labelText: 'Dosagem'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira a dosagem do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _dataInicioController,
+                decoration: const InputDecoration(labelText: 'Data de Início'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira a data de início do medicamento';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                controller: _dataFimController,
+                decoration: const InputDecoration(labelText: 'Data de Fim'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Por favor, insira a data de fim do medicamento';
                   }
                   return null;
                 },

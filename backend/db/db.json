@@ -1,28 +1,28 @@
 {
   "medicamentos": [
     {
-      "id": "639",
-      "nome": "Paracetamol w",
-      "descricao": "Medicamento",
-      "lembretes": [],
-      "forma": "",
-      "intervalo": "",
-      "quantidade": "",
-      "dataInicio": "",
-      "dataFim": "",
-      "procedimento": ""
+      "id": 1,
+      "nome": "Paracetamol",
+      "descricao": "Medicamento para dor e febre",
+      "forma": "Comprimido",
+      "intervalo": 8,
+      "quantidade": 20,
+      "dataInicio": "2023-01-01T00:00:00",
+      "dataFim": "2023-01-10T00:00:00",
+      "procedimento": "Oral",
+      "dosagem": 500
     },
     {
-      "id": "639",
-      "nome": "Paracetamol ww",
-      "descricao": "Medicamento",
+      "id": 1,
+      "nome": "Paracetamol",
+      "descricao": "Medicamento para dor e febre",
       "lembretes": [],
-      "forma": "",
-      "intervalo": "",
-      "quantidade": "",
-      "dataInicio": "",
-      "dataFim": "",
-      "procedimento": ""
+      "forma": "Comprimido",
+      "intervalo": 8,
+      "quantidade": 20,
+      "dataInicio": "2023-01-01T00:00:00",
+      "dataFim": "2023-01-10T00:00:00",
+      "procedimento": "Oral"
     }
   ],
   "lembretes": [
