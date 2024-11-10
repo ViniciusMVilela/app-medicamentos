@@ -11,7 +11,7 @@ class Medicamento {
   String dataInicio;
   String dataFim;
   String procedimento;
-  int dosagem;
+  String dosagem;
 
   Medicamento({
     required this.id,

@@ -66,15 +66,15 @@ class MockClient extends Mock implements http.Client {
 
       test('addMedicamento faz uma requisição POST com sucesso', () async {
         var medicamento = Medicamento(
-            id: "1",
+            id: 1,
             nome: "Medicamento C",
             dosagem: "30mg",
             procedimento: '',
             descricao: '',
             lembretes: [],
             forma: 'Oral',
-            intervalo: '8h',
-            quantidade: "10",
+            intervalo: 8,
+            quantidade: 10,
             dataInicio: '2024-01-01',
             dataFim: '2024-01-10');
         when(mockClient.post(
@@ -89,15 +89,15 @@ class MockClient extends Mock implements http.Client {
 
       test('addMedicamento lança exceção se a resposta não for 201', () async {
         var medicamento = Medicamento(
-            id: "1",
+            id: 1,
             nome: "Medicamento D",
             dosagem: "40mg",
             procedimento: '',
             descricao: '',
             lembretes: [],
             forma: 'Oral',
-            intervalo: '8h',
-            quantidade: "10",
+            intervalo: 8,
+            quantidade: 10,
             dataInicio: '2024-01-01',
             dataFim: '2024-01-10');
         when(mockClient.post(

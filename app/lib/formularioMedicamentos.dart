@@ -53,7 +53,7 @@ class _FormularioMedicamentoPageState extends State<FormularioMedicamentoPage> {
         forma: _formaController.text,
         intervalo: int.parse(_intervaloController.text),
         quantidade: int.parse(_quantidadeController.text),
-        dosagem: int.parse(_dosagemController.text),
+        dosagem: _dosagemController.text,
         dataInicio: _dataInicioController.text,
         dataFim: _dataFimController.text,
       );

@@ -10,7 +10,7 @@
       "dataInicio": "2023-01-01T00:00:00",
       "dataFim": "2023-01-10T00:00:00",
       "procedimento": "Oral",
-      "dosagem": 500
+      "dosagem": "500mg"
     },
     {
       "id": 1,
